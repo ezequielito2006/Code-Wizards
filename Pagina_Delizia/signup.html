@@ -7,6 +7,7 @@
     <!-- Font Awesome para íconos -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 </head>
 <body>
     <!-- Navbar -->
@@ -40,39 +41,47 @@
         </div>
     </header>
 
-    <!-- Carousel -->
-    <div class="carousel-container">
-        <div class="carousel">
-            <img src="img/image1.png" alt="Producto 1" class="carousel-slide">
-            <img src="img/image2.png" alt="Producto 2" class="carousel-slide">
-            <img src="img/image3.png" alt="Producto 3" class="carousel-slide">
-            <img src="img/image4.png" alt="Producto 4" class="carousel-slide">
-            <img src="img/image5.png" alt="Producto 5" class="carousel-slide">
-        </div>
-        <div class="carousel-controls">
-            <span class="prev" onclick="changeSlide(-1)">&#10094;</span>
-            <span class="next" onclick="changeSlide(1)">&#10095;</span>
-        </div>
-    </div>
-
-    <!-- Product Grid -->
-    <section class="product-section">
-        <h2>Nuestros Productos</h2>
-        <div class="product-grid">
-            <div class="product-card"><img src="img/copa-helada-frutilla-platano.png" alt="Copa Helada Frutilla Plátano"><p>Copa Helada Frutilla Plátano</p></div>
-            <div class="product-card"><img src="img/delivasito.png" alt="Delisavito 100ml"><p>Delisavito 100ml</p></div>
-            <div class="product-card"><img src="img/delizaurio.png" alt="Delizaurio Cherry Pina"><p>Delizaurio Cherry Pina</p></div>
-            <div class="product-card"><img src="img/litro-familiar-granizado.png" alt="Base Granizado 1L"><p>Base Granizado 1L</p></div>
-            <div class="product-card"><img src="img/cassatta-chocolate.png" alt="Cassatta"><p>Cassatta</p></div>
-            <div class="product-card"><img src="img/alfredo-canela.png" alt="Alfredo Canela"><p>Alfredo Canela</p></div>
-            <div class="product-card"><img src="img/base-soft.png" alt="Base Soft Sachet 946ml"><p>Base Soft Sachet 946ml</p></div>
-            <div class="product-card"><img src="img/bolo-surtido.png" alt="Bolo Leche Sachet 60ml"><p>Bolo Leche Sachet 60ml</p></div>
-            <div class="product-card"><img src="img/bolo-surtido-leche.png" alt="Bolo Leche Sachet Surtido 60ml"><p>Bolo Leche Sachet Surtido 60ml</p></div>
-            <div class="product-card"><img src="img/capuccino.png" alt="Copa Helada Cappuccino"><p>Copa Helada Cappuccino</p></div>
-            <div class="product-card"><img src="img/cono-white.png" alt="Cono"><p>Cono</p></div>
-            <div class="product-card"><img src="img/divertipack.png" alt="Divertipack"><p>Divertipack</p></div>
-        </div>
-    </section>
+    <!-- Sign Up Section -->
+    <main>
+        <section class="signup-section">
+            <div class="signup-container">
+            <h2>Únete a la Familia Delizia</h2>
+            <form class="signup-form" id="form-registro">
+                <div class="form-group">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div class="form-group">
+                <label for="apellido">Apellido</label>
+                <input type="text" id="apellido" name="apellido" required>
+                </div>
+                <div class="form-group">
+                <label for="email">Correo Electrónico</label>
+                <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                <label for="nombre_usuario">Nombre de Usuario</label>
+                <input type="text" id="nombre_usuario" name="nombre_usuario" required>
+                </div>
+                <div class="form-group">
+                <label for="password">Contraseña</label>
+                <input type="password" id="password" name="password" required>
+                </div>
+                <div class="form-group">
+                <label for="rol">Rol</label>
+                <select id="rol" name="rol" required>
+                    <option value="">Selecciona un rol</option>
+                    <option value="cliente">Cliente</option>
+                    <option value="administrador">Administrador</option>
+                </select>
+                </div>
+                <div class="form-group">
+                <button type="submit" class="btn register">Registrarse</button>
+                </div>
+            </form>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
