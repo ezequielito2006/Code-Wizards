@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delizia Helados</title>
+    <!-- Font Awesome para íconos -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">
+            <img src="img/delizia-logo.png" alt="Delizia Helados">
+        </div>
+        <nav class="nav-links">
+            <ul>
+                <li><a href="#">Familia Delizia</a></li>
+                <li><a href="#">Nuestros Productos</a></li>
+                <li><a href="#">Atención al Cliente</a></li>
+                <li><a href="#">Blog Delizia</a></li>
+                <li><a href="#">Abre tu Agencia Delizia</a></li>
+            </ul>
+        </nav>
+        <div class="auth-buttons">
+            <a href="#" class="btn login">Iniciar Sesión</a>
+            <a href="#" class="btn register">Registrarse</a>
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </header>
+
+    <!-- Carousel -->
+    <div class="carousel-container">
+        <div class="carousel">
+            <img src="img/image1.png" alt="Producto 1" class="carousel-slide">
+            <img src="img/image2.png" alt="Producto 2" class="carousel-slide">
+            <img src="img/image3.png" alt="Producto 3" class="carousel-slide">
+            <img src="img/image4.png" alt="Producto 4" class="carousel-slide">
+            <img src="img/image5.png" alt="Producto 5" class="carousel-slide">
+        </div>
+        <div class="carousel-controls">
+            <span class="prev" onclick="changeSlide(-1)">&#10094;</span>
+            <span class="next" onclick="changeSlide(1)">&#10095;</span>
+        </div>
+    </div>
+
+    <!-- Product Grid -->
+    <section class="product-section">
+        <h2>Nuestros Productos</h2>
+        <div class="product-grid">
+            <div class="product-card"><img src="img/copa-helada-frutilla-platano.png" alt="Copa Helada Frutilla Plátano"><p>Copa Helada Frutilla Plátano</p></div>
+            <div class="product-card"><img src="img/delivasito.png" alt="Delisavito 100ml"><p>Delisavito 100ml</p></div>
+            <div class="product-card"><img src="img/delizaurio.png" alt="Delizaurio Cherry Pina"><p>Delizaurio Cherry Pina</p></div>
+            <div class="product-card"><img src="img/litro-familiar-granizado.png" alt="Base Granizado 1L"><p>Base Granizado 1L</p></div>
+            <div class="product-card"><img src="img/cassatta-chocolate.png" alt="Cassatta"><p>Cassatta</p></div>
+            <div class="product-card"><img src="img/alfredo-canela.png" alt="Alfredo Canela"><p>Alfredo Canela</p></div>
+            <div class="product-card"><img src="img/base-soft.png" alt="Base Soft Sachet 946ml"><p>Base Soft Sachet 946ml</p></div>
+            <div class="product-card"><img src="img/bolo-surtido.png" alt="Bolo Leche Sachet 60ml"><p>Bolo Leche Sachet 60ml</p></div>
+            <div class="product-card"><img src="img/bolo-surtido-leche.png" alt="Bolo Leche Sachet Surtido 60ml"><p>Bolo Leche Sachet Surtido 60ml</p></div>
+            <div class="product-card"><img src="img/capuccino.png" alt="Copa Helada Cappuccino"><p>Copa Helada Cappuccino</p></div>
+            <div class="product-card"><img src="img/cono-white.png" alt="Cono"><p>Cono</p></div>
+            <div class="product-card"><img src="img/divertipack.png" alt="Divertipack"><p>Divertipack</p></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <img src="img/delizia-logo_blanco.png" alt="Delizia Helados" class="footer-logo">
+            <div class="footer-links">
+                <a href="#">Familia Delizia</a>
+                <a href="#">Atención al Cliente</a>
+                <a href="#">Recetas</a>
+                <a href="#">Nuestras Agencias</a>
+            </div>
+        </div>
+        <div class="social-media">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+        <p class="footer-copy">© 2025 Delizia Helados. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
