@@ -18,6 +18,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+
 use App\Http\Controllers\UsuarioController;
 
 Route::post('/registro', [UsuarioController::class, 'registrar']);
@@ -134,10 +135,6 @@ Route::post('/qr', [QrController::class, 'store']);
 Route::get('/qr/{id}', [QrController::class, 'show']);
 Route::delete('/qr/{id}', [QrController::class, 'destroy']);
 Route::post('/qr/validar', [QrController::class, 'validar']);
-
-
-
-
 
 
 
