@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gestión de Pedidos - Delizia</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">
+      <img src="img/delizia-logo.png" alt="Delizia Helados" />
+    </div>
+    <nav class="nav-links">
+      <ul>
+        <li><a href="adminPanel.html">Panel Principal</a></li>
+        <li><a href="admin-usuarios.html">Usuarios</a></li>
+        <li><a href="gestionproductos.html">Productos</a></li>
+        <li><a href="gestionpedidos.html">Pedidos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="admin-main">
+    <section class="admin-pedidos">
+      <h2>Crear Pedido</h2>
+
+      <form id="form-pedido" class="formulario">
+        <input type="text" name="cliente" placeholder="Nombre del cliente" required />
+        <input type="date" name="fecha" required />
+        <select name="estado">
+          <option value="pendiente">Pendiente</option>
+          <option value="pagado">Pagado</option>
+        </select>
+        <button type="submit">Generar Pedido</button>
+      </form>
+
+      <div id="qr-container" style="margin-top: 20px;"></div>
+
+      <table id="tabla-detalle">
+        <thead>
+          <tr>
+            <th>Producto</th>
+            <th>Cantidad</th>
+            <th>Subtotal</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+     <!-- 🔥 Historial de pedidos por usuario -->
+  <section class="historial-pedidos" style="margin-top:40px;">
+    <h2>Historial de Pedidos</h2>
+    <button onclick="consultarHistorial(1)">Ver historial de usuario #1</button>
+    <div id="historialContainer" style="margin-top:20px;"></div>
+  </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delizia Helados - Administrador</title>
+    <!-- Font Awesome para íconos -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header class="navbar">
+      <div class="logo">
+        <img src="img/delizia-logo.png" alt="Delizia Helados" />
+      </div>
+      <nav class="nav-links">
+        <ul>
+          <li><a href="adminPanel.html">Panel de Administración</a></li>
+          <li><a href="admin-usuarios.html">Panel de Administración de Usuarios</a></li>
+           <li><a href="gestionproductos.html">Gestión de Productos</a></li>
+        </ul>
+      </nav>
+      <div id="usuario-info" class="usuario-info" style="display: none">
+        <span>¡Hola, <strong id="nombre-usuario"></strong>!</span>
+        <a href="index.html" id="cerrar-sesion" class="btn logout"
+          >Cerrar sesión</a
+        >
+      </div>
+      <div class="hamburger" onclick="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+    </header>
+
+    <!-- Main -->
+    <main class="admin-main">
+      <section class="admin-welcome">
+        <h1>Bienvenido al Panel de Administración</h1>
+        <p>
+          Estás en la sección de <strong>Administrador</strong> de
+          <em>Delizia Helados</em>. Desde aquí podrás gestionar de manera
+          sencilla y organizada:
+        </p>
+        <ul>
+          <li>
+            <i class="fas fa-users"></i> Usuarios registrados en el sistema
+          </li>
+        </ul>
+        <p>
+          Usa el menú superior para acceder a cada panel y mantener todo bajo
+          control. ¡Tu gestión asegura que Delizia siga creciendo con
+          excelencia!
+        </p>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-top">
+        <img
+          src="img/delizia-logo_blanco.png"
+          alt="Delizia Helados"
+          class="footer-logo"
+        />
+        <div class="footer-links">
+          <li><a href="adminPanel.html">Panel de Administración</a></li>
+          <a href="admin-usuarios.html">Panel de Usuarios</a>
+        </div>
+      </div>
+      <div class="social-media">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+      <p class="footer-copy">
+        © 2025 Delizia Helados. Todos los derechos reservados.
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
